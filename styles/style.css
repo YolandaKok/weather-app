@@ -11,22 +11,20 @@ body {
   flex-direction: row;
 }
 
-.weather {
+.weather1 {
   flex: 1;
 }
 
-.weather1 {
-
-}
-
 .weather2 {
+  flex: 1;
   background-color: #eaeaea;
 }
 
 .weather3 {
-
+  flex: 1;
 }
 
 .weather4 {
+  flex: 1;
   background-color: #eaeaea;
 }
