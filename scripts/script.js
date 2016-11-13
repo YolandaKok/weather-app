@@ -21,10 +21,10 @@ $(document).ready(function() {
           // weather summary
           var summary = data.currently.summary;
           $(".summary1").html("<h3>" + summary + "</h3>");
-          var temperature = data.currently.temperature;
+          var temperature1 = data.currently.temperature;
           // make them celcius
-          temperature = Math.round((temperature - 32) * (5/9));
-          $(".temperature").html(temperature + "&deg");
+          temperature1 = Math.round((temperature1 - 32) * (5/9));
+          $(".temperature1").html(temperature1 + "&deg");
       }
     });
 
