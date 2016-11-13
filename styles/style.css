@@ -1,7 +1,32 @@
+body {
+  background-color: #f7d9a3;
+  padding: 50px;
+}
+
 .flex {
   background-color: white;
   display: flex;
   max-width: 800px;
   margin: 0 auto;
   flex-direction: row;
+}
+
+.weather {
+  flex: 1;
+}
+
+.weather1 {
+
+}
+
+.weather2 {
+  background-color: #eaeaea;
+}
+
+.weather3 {
+
+}
+
+.weather4 {
+  background-color: #eaeaea;
 }
