@@ -36,3 +36,10 @@ body {
   flex: 1;
   background-color: #eaeaea;
 }
+
+@media (max-width: 800px) {
+  .flex {
+    flex-direction: column;
+  }
+
+}
