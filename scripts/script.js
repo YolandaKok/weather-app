@@ -33,7 +33,7 @@ $(document).ready(function() {
               $.(".weather-icon1").html("<i class='wi wi-day-sunny'></i>")
               break;
             case "clear-night":
-              $.(".weather-icon1").html("<i class='wi'></i>")
+              $.(".weather-icon1").html("<i class='wi wi-night-clear'></i>")
               break;
             case "rain":
               $.(".weather-icon1").html("<i class='wi'></i>")
