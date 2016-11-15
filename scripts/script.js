@@ -17,6 +17,7 @@ $(document).ready(function() {
         url: url,
         dataType: "jsonp",
         success: function (data) {
+          // for displaying perpose
           console.log(data);
           // weather summary
           var summary = data.currently.summary;
@@ -25,8 +26,11 @@ $(document).ready(function() {
           // make them celcius
           temperature1 = Math.round((temperature1 - 32) * (5/9));
           $(".temperature1").html(temperature1 + "&deg");
-          // show data in json format
-          console.log(data);
+          // icon
+          var icon = data.currently.icon;
+          if(icon == "partly-cloudy-night") {
+            $(".icon1").html("<i class='wi wi-night-alt-cloudy'></i>");
+          }
       }
     });
 
