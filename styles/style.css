@@ -25,11 +25,7 @@ body {
 
 .wi {
   color: #d7a718;
-}
-
-.wi-fw {
-  width: 64px;
-  height: 64px;
+  font-size: 64px;
 }
 
 .weather2 {
