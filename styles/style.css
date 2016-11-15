@@ -24,9 +24,12 @@ body {
 }
 
 .wi {
-  width: 64px; !important
-  height: 64px; !important
   color: #d7a718;
+}
+
+.wi-fw {
+  width: 64px;
+  height: 64px;
 }
 
 .weather2 {

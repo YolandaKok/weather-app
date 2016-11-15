@@ -33,7 +33,7 @@ $(document).ready(function() {
               $(".weather-icon1").html("<i class='wi wi-day-sunny icon'></i>");
               break;
             case "clear-night":
-              $(".weather-icon1").html("<i class='wi wi-night-clear icon'></i>");
+              $(".weather-icon1").html("<i class='wi wi-night-clear icon wi-fw'></i>");
               break;
             case "rain":
               $(".weather-icon1").html("<i class='wi icon'></i>");
@@ -57,7 +57,7 @@ $(document).ready(function() {
               $(".weather-icon1").html("<i class='wi icon'></i>");
               break;
             case "partly-cloudy-night":
-              $(".weather-icon1").html("<i class='wi wi-night-cloudy icon'></i>");
+              $(".weather-icon1").html("<i class='wi wi-night-cloudy icon wi-fw'></i>");
               break;
 
           }
