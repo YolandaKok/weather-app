@@ -11,6 +11,14 @@ div h3 {
   padding-top: 20px;
 }
 
+div h5 {
+  color: #838383;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
 .flex {
   background-color: white;
   display: flex;
@@ -24,7 +32,6 @@ div h3 {
   font-weight: bold;
   color: #000;
   padding-top: 10px;
-  padding-bottom: 80px;
   text-align: center;
 }
 
