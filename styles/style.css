@@ -23,7 +23,7 @@ body {
   flex: 1;
 }
 
-.weather-icon1 {
+.icon {
   width: 64px;
   height: 64px;
   color: #d7a718;
