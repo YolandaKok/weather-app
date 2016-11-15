@@ -25,6 +25,7 @@ div h3 {
   color: #000;
   padding-top: 10px;
   padding-bottom: 80px;
+  text-align: center;
 }
 
 .weather1 {
@@ -34,6 +35,7 @@ div h3 {
 .wi {
   color: #d7a718;
   font-size: 48px;
+  text-align: center;
 }
 
 .weather2 {
