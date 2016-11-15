@@ -28,8 +28,10 @@ $(document).ready(function() {
           $(".temperature1").html(temperature1 + "&deg");
           // icon
           var icon = data.currently.icon;
+          console.log(icon);
           if(icon == "partly-cloudy-night") {
             $(".icon1").html("<i class='wi wi-night-alt-cloudy'></i>");
+            console.log(33);
           }
       }
     });
