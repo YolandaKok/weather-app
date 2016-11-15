@@ -25,6 +25,8 @@ $(document).ready(function() {
           // make them celcius
           temperature1 = Math.round((temperature1 - 32) * (5/9));
           $(".temperature1").html(temperature1 + "&deg");
+          // show data in json format
+          console.log(data);
       }
     });
 
