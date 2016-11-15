@@ -23,6 +23,14 @@ body {
   flex: 1;
 }
 
+.weather-icon1 {
+  width: 64px;
+  height: 64px;
+  color: #d7a718;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
 .weather2 {
   flex: 1;
   background-color: #eaeaea;
