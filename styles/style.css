@@ -24,11 +24,9 @@ body {
 }
 
 .icon {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  height: 100px;
   color: #d7a718;
-  margin: 0 auto;
-  padding-top: 10px;
 }
 
 .weather2 {
