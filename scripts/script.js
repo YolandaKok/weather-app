@@ -30,34 +30,34 @@ $(document).ready(function() {
           var icon = data.currently.icon;
           switch (icon) {
             case "clear-day":
-              $(".weather-icon1").html("<i class='wi wi-day-sunny icon'></i>");
+              $(".weather-icon1").html("<i class='wi wi-day-sunny'></i>");
               break;
             case "clear-night":
-              $(".weather-icon1").html("<i class='wi wi-night-clear icon wi-fw'></i>");
+              $(".weather-icon1").html("<i class='wi wi-night-clear'></i>");
               break;
             case "rain":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "snow":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "sleet":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "wind":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "fog":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "cloudy":
-              $(".weather-icon1").html("<i class='wi wi-day-cloudy icon'></i>");
+              $(".weather-icon1").html("<i class='wi wi-day-cloudy'></i>");
               break;
             case "partly-cloudy-day":
-              $(".weather-icon1").html("<i class='wi icon'></i>");
+              $(".weather-icon1").html("<i class='wi'></i>");
               break;
             case "partly-cloudy-night":
-              $(".weather-icon1").html("<i class='wi wi-night-cloudy icon wi-fw'></i>");
+              $(".weather-icon1").html("<i class='wi wi-night-cloudy'></i>");
               break;
 
           }
