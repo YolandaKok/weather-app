@@ -8,10 +8,13 @@ $(document).ready(function() {
          "</p>";
      $(".city").html(city);
      var location = data.loc;
-       var url="https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + location;
+     var url="https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + location;
      location = location.split(',');
      var lat = location[0];
      var lon = location[1];
+     // city
+     var city = data.city;
+     $(".city").html("<h5>" + city + "</h5>");
      // ajax call to the darksky api
        $.ajax({
         url: url,
