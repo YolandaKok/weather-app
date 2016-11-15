@@ -28,10 +28,38 @@ $(document).ready(function() {
           $(".temperature1").html(temperature1 + "&deg");
           // icon
           var icon = data.currently.icon;
-          console.log(icon);
-          if(icon == "partly-cloudy-night") {
-            $(".weather-icon1").html("<i class='wi wi-night-alt-cloudy'></i>");
-            console.log(33);
+          switch (icon) {
+            case "clear-day":
+              $.(".weather-icon1").html("<i class='wi wi-day-sunny'></i>")
+              break;
+            case "clear-night":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "rain":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "snow":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "sleet":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "wind":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "fog":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "cloudy":
+              $.(".weather-icon1").html("<i class='wi wi-day-cloudy'></i>")
+              break;
+            case "partly-cloudy-day":
+              $.(".weather-icon1").html("<i class='wi'></i>")
+              break;
+            case "partly-cloudy-night":
+              $.(".weather-icon1").html("<i class='wi wi-night-cloudy'></i>")
+              break;
+
           }
       }
     });
