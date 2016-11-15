@@ -30,7 +30,7 @@ $(document).ready(function() {
           var icon = data.currently.icon;
           console.log(icon);
           if(icon == "partly-cloudy-night") {
-            $(".icon1").html("<i class='wi wi-night-alt-cloudy'></i>");
+            $(".weather-icon1").html("<i class='wi wi-night-alt-cloudy'></i>");
             console.log(33);
           }
       }
