@@ -14,7 +14,8 @@ $(document).ready(function() {
      var lon = location[1];
      // city
      var city = data.city;
-     $(".city").html("<h5>" + city + "</h5>");
+     var country = data.country;
+     $(".city").html("<h5>" + city + ", " + country + "</h5>");
      // ajax call to the darksky api
        $.ajax({
         url: url,
