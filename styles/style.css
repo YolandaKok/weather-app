@@ -28,6 +28,10 @@ div h3 {
   text-align: center;
 }
 
+.weather-icon1 {
+  text-align: center;
+}
+
 .weather1 {
   flex: 1;
 }
