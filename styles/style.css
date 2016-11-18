@@ -69,3 +69,9 @@ i {
   }
 
 }
+
+@media screen (orientation: portrait) {
+  .flex {
+    flex-direction: column;
+  }
+}
