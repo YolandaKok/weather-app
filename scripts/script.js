@@ -83,7 +83,7 @@ $(document).ready(function() {
           $(selector).html("<i class='wi wi-day-cloudy'></i>");
           break;
         case "partly-cloudy-day":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-cloudy'></i>");
           break;
         case "partly-cloudy-night":
           $(selector).html("<i class='wi wi-night-cloudy'></i>");
