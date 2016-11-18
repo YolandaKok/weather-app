@@ -70,8 +70,13 @@ i {
 
 }
 
-@media screen (orientation: portrait) {
-  .flex {
-    flex-direction: column;
-  }
+/* Portrait */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+      .flex {
+         flex-direction: column;
+      }
 }
