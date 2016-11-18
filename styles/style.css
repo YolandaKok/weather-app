@@ -22,9 +22,9 @@ div h5 {
 .flex {
   background-color: white;
   display: flex;
+  flex-direction: row;
   max-width: 800px;
   margin: 0 auto;
-  flex-direction: row;
 }
 
 .temperature1 {
@@ -78,5 +78,6 @@ i {
   and (orientation: portrait) {
       .flex {
          flex-direction: column;
+         width: 100%;
       }
 }
