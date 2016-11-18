@@ -2,7 +2,6 @@ $(document).ready(function() {
   // so that it loads when the user visits the page
    $.ajaxSetup({ cache: false });
   // uses the ipinfo API
-
     $.getJSON("https://ipinfo.io", function(data) {
      var city = "<p class='city'>" + data.city + ", " + data.country +
          "</p>";
@@ -21,7 +20,7 @@ $(document).ready(function() {
         url: url,
         dataType: "jsonp",
         success: function (data) {
-          // for displaying perpose
+          // for displaying purpose
           console.log(data);
           // weather summary
           var summary = data.currently.summary;
@@ -32,42 +31,45 @@ $(document).ready(function() {
           $(".temperature1").html(temperature1 + "&deg");
           // icon
           var icon = data.currently.icon;
-          switch (icon) {
-            case "clear-day":
-              $(".weather-icon1").html("<i class='wi wi-day-sunny'></i>");
-              break;
-            case "clear-night":
-              $(".weather-icon1").html("<i class='wi wi-night-clear'></i>");
-              break;
-            case "rain":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "snow":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "sleet":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "wind":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "fog":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "cloudy":
-              $(".weather-icon1").html("<i class='wi wi-day-cloudy'></i>");
-              break;
-            case "partly-cloudy-day":
-              $(".weather-icon1").html("<i class='wi'></i>");
-              break;
-            case "partly-cloudy-night":
-              $(".weather-icon1").html("<i class='wi wi-night-cloudy'></i>");
-              break;
-
-          }
+          chooseIcon(icon);
         }
     });
 
   });
-
+  // choose icon function according the weather
+  function chooseIcon(icon) {
+      switch (icon) {
+        case "clear-day":
+          $(".weather-icon1").html("<i class='wi wi-day-sunny'></i>");
+          break;
+        case "clear-night":
+          $(".weather-icon1").html("<i class='wi wi-night-clear'></i>");
+          break;
+        case "rain":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "snow":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "sleet":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "wind":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "fog":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "cloudy":
+          $(".weather-icon1").html("<i class='wi wi-day-cloudy'></i>");
+          break;
+        case "partly-cloudy-day":
+          $(".weather-icon1").html("<i class='wi'></i>");
+          break;
+        case "partly-cloudy-night":
+          $(".weather-icon1").html("<i class='wi wi-night-cloudy'></i>");
+          break;
+      }
+  }
+  // end of chooseIcon function
 });
