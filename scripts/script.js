@@ -19,55 +19,61 @@ $(document).ready(function() {
        $.ajax({
         url: url,
         dataType: "jsonp",
-        success: function (data) {
+        success: function (response) {
           // for displaying purpose
-          console.log(data);
+          console.log(response);
           // weather summary
-          var summary = data.currently.summary;
+          var summary = response.currently.summary;
           $(".summary1").html("<h3>" + summary + "</h3>");
-          var temperature1 = data.currently.temperature;
+          var temperature1 = response.currently.temperature;
           // make them celcius
           temperature1 = Math.round((temperature1 - 32) * (5/9));
           $(".temperature1").html(temperature1 + "&deg");
           // icon
-          var icon = data.currently.icon;
-          chooseIcon(icon);
+          var icon1 = response.currently.icon;
+          chooseIcon(icon1);
+          // second day
+          var icon2 = response.daily.data[0].icon;
+          // chooseIcon(icon2);
+          // third day
+          // fourth day .daily.data[0].icon
         }
     });
 
   });
   // choose icon function according the weather
   function chooseIcon(icon) {
+      var selector = ".weather-icon1";
       switch (icon) {
         case "clear-day":
-          $(".weather-icon1").html("<i class='wi wi-day-sunny'></i>");
+          $(selector).html("<i class='wi wi-day-sunny'></i>");
           break;
         case "clear-night":
-          $(".weather-icon1").html("<i class='wi wi-night-clear'></i>");
+          $(selector).html("<i class='wi wi-night-clear'></i>");
           break;
         case "rain":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "snow":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "sleet":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "wind":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "fog":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "cloudy":
-          $(".weather-icon1").html("<i class='wi wi-day-cloudy'></i>");
+          $(selector).html("<i class='wi wi-day-cloudy'></i>");
           break;
         case "partly-cloudy-day":
-          $(".weather-icon1").html("<i class='wi'></i>");
+          $(selector).html("<i class='wi'></i>");
           break;
         case "partly-cloudy-night":
-          $(".weather-icon1").html("<i class='wi wi-night-cloudy'></i>");
+          $(selector).html("<i class='wi wi-night-cloudy'></i>");
           break;
       }
   }
