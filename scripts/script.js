@@ -51,7 +51,7 @@ $(document).ready(function() {
         var selector = ".weather-icon3";
       }
       else if(num == 2){
-        var selector = ".weather-icon4";  
+        var selector = ".weather-icon4";
       }
       else {
         var selector = ".weather-icon1";
@@ -65,19 +65,19 @@ $(document).ready(function() {
           $(selector).html("<i class='wi wi-night-clear'></i>");
           break;
         case "rain":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-rain'></i>");
           break;
         case "snow":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-snow'></i>");
           break;
         case "sleet":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-sleet-storm'></i>");
           break;
         case "wind":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-windy'></i>");
           break;
         case "fog":
-          $(selector).html("<i class='wi'></i>");
+          $(selector).html("<i class='wi wi-day-fog'></i>");
           break;
         case "cloudy":
           $(selector).html("<i class='wi wi-day-cloudy'></i>");
