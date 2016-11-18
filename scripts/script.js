@@ -31,19 +31,32 @@ $(document).ready(function() {
           $(".temperature1").html(temperature1 + "&deg");
           // icon
           var icon1 = response.currently.icon;
-          chooseIcon(icon1);
+          chooseIcon(icon1, 5);
           // second day
-          var icon2 = response.daily.data[0].icon;
-          // chooseIcon(icon2);
-          // third day
-          // fourth day .daily.data[0].icon
+          for (var i = 0; i < 3; i++) {
+            var icon = response.daily.data[i].icon;
+            chooseIcon(icon, i);
+          }
+
         }
     });
 
   });
   // choose icon function according the weather
-  function chooseIcon(icon) {
-      var selector = ".weather-icon1";
+  function chooseIcon(icon, num) {
+      if(num == 0) {
+        var selector = ".weather-icon2";
+      }
+      else if(num == 1) {
+        var selector = ".weather-icon3";
+      }
+      else if(num == 2){
+        var selector = ".weather-icon4";  
+      }
+      else {
+        var selector = ".weather-icon1";
+      }
+
       switch (icon) {
         case "clear-day":
           $(selector).html("<i class='wi wi-day-sunny'></i>");
