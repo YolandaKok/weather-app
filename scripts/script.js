@@ -1,41 +1,40 @@
-// get exact coords using javascript navigator
-navigator.geolocation.getCurrentPosition(success);
-function success(pos) {
-    var coord = pos.coords;
-    var lat = coord.latitude;
-    var lon = coord.longtitude;
-    console.log(lat);
-    console.log(lon);
-    var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
-}
 $(document).ready(function() {
+  $.ajaxSetup({ cache: false });
+  // get exact coords using javascript navigator
   // so that it loads when the user visits the page
-   $.ajaxSetup({ cache: false });
-     // ajax call to the darksky api
-       $.ajax({
-        url: url,
-        dataType: "jsonp",
-        success: function (response) {
-          // for displaying purpose
-          console.log(response);
-          // weather summary
-          var summary = response.currently.summary;
-          $(".summary1").html("<h3>" + summary + "</h3>");
-          var temperature1 = response.currently.temperature;
-          // make them celcius
-          temperature1 = Math.round((temperature1 - 32) * (5/9));
-          $(".temperature1").html(temperature1 + "&deg");
-          // icon
-          var icon1 = response.currently.icon;
-          chooseIcon(icon1, 5);
-          // second day
-          for (var i = 0; i < 3; i++) {
-            var icon = response.daily.data[i].icon;
-            chooseIcon(icon, i);
-          }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
+    // ajax call to the darksky api
+      $.ajax({
+       url: url,
+       dataType: "jsonp",
+       success: function (response) {
+         // for displaying purpose
+         console.log(response);
+         // weather summary
+         var summary = response.currently.summary;
+         $(".summary1").html("<h3>" + summary + "</h3>");
+         var temperature1 = response.currently.temperature;
+         // make them celcius
+         temperature1 = Math.round((temperature1 - 32) * (5/9));
+         $(".temperature1").html(temperature1 + "&deg");
+         // icon
+         var icon1 = response.currently.icon;
+         chooseIcon(icon1, 5);
+         // second day
+         for (var i = 0; i < 3; i++) {
+           var icon = response.daily.data[i].icon;
+           chooseIcon(icon, i);
+         }
 
-        }
-    });
+       }
+   });
+});
+
+}
   // choose icon function according the weather
   function chooseIcon(icon, num) {
       if(num == 0) {
