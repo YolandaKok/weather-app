@@ -38,7 +38,7 @@ $(document).ready(function() {
            // weather icon
            var icon = response.daily.data[i].icon;
            // temperature
-           var temperature = response.daily.data[i].temperature;
+           var temperature = response.daily.data[i].temperatureMax;
            temperature = Math.round((temperature - 32) * (5/9));
            // date
            chooseIcon(summary, icon, temperature, i);
