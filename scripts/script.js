@@ -22,8 +22,8 @@ $(document).ready(function() {
          // for displaying purpose
          console.log(response);
          // weather summary
-         var summary = response.currently.summary;
-         $(".summary1").html("<h3>" + summary + "</h3>");
+         var summary1 = response.currently.summary;
+         $(".summary1").html("<h3>" + summary1 + "</h3>");
          var temperature1 = response.currently.temperature;
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
