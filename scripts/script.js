@@ -33,8 +33,13 @@ $(document).ready(function() {
          chooseIcon(icon1, 5);
          // second day
          for (var i = 0; i < 3; i++) {
+           // summary
+           var summary = response.daily.data[i].summary;
+           // weather icon
            var icon = response.daily.data[i].icon;
-           chooseIcon(icon, i);
+           // temperature
+           // date
+           chooseIcon(summary, icon, i);
          }
 
        }
@@ -43,15 +48,18 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(icon, num) {
+  function chooseIcon(summary, icon, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
+        $(".summary2").html("<h3>" + summary + "</h3>");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
+        $(".summary3").html("<h3>" + summary + "</h3>");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
+        $(".summary4").html("<h3>" + summary + "</h3>");
       }
       else {
         var selector = ".weather-icon1";
