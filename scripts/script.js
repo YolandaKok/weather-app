@@ -11,6 +11,8 @@ $(document).ready(function() {
     var url_city = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&key=AIzaSyCs290tz0-h_Q36IDAH2kuWfKeQnQIKH6c";
     $.getJSON(url_city, function(response) {
         console.log(response);
+        var city = response.results[1].formatted_address;
+        $(".city").html("<h5>" + city + "</h5>");
     });
     // ajax call to the darksky api
       $.ajax({
