@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(summary, icon, num) {
+  function chooseIcon(summary, icon,temperature, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
         $(".summary2").html("<h3>" + summary + "</h3>");
