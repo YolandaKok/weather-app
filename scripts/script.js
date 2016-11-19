@@ -1,20 +1,16 @@
 $(document).ready(function() {
   // so that it loads when the user visits the page
    $.ajaxSetup({ cache: false });
-  // uses the ipinfo API
-    $.getJSON("https://ipinfo.io", function(data) {
-     var city = "<p class='city'>" + data.city + ", " + data.country +
-         "</p>";
-     $(".city").html(city);
-     var location = data.loc;
-     var url="https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + location;
-     location = location.split(',');
-     var lat = location[0];
-     var lon = location[1];
-     // city
-     var city = data.city;
-     var country = data.country;
-     $(".city").html("<h5>" + city + ", " + country + "</h5>");
+   // get exact coords using javascript navigator
+   navigator.geolocation.getCurrentPosition(success);
+   function success(pos) {
+       var coord = pos.coords;
+       var lat = coord.latitude;
+       var lon = coord.longtitude;
+       console.log(lat);
+       console.log(lon);
+       var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
+   }
      // ajax call to the darksky api
        $.ajax({
         url: url,
@@ -40,8 +36,6 @@ $(document).ready(function() {
 
         }
     });
-
-  });
   // choose icon function according the weather
   function chooseIcon(icon, num) {
       if(num == 0) {
