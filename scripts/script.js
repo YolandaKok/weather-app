@@ -1,16 +1,16 @@
+// get exact coords using javascript navigator
+navigator.geolocation.getCurrentPosition(success);
+function success(pos) {
+    var coord = pos.coords;
+    var lat = coord.latitude;
+    var lon = coord.longtitude;
+    console.log(lat);
+    console.log(lon);
+    var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
+}
 $(document).ready(function() {
   // so that it loads when the user visits the page
    $.ajaxSetup({ cache: false });
-   // get exact coords using javascript navigator
-   navigator.geolocation.getCurrentPosition(success);
-   function success(pos) {
-       var coord = pos.coords;
-       var lat = coord.latitude;
-       var lon = coord.longtitude;
-       console.log(lat);
-       console.log(lon);
-       var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
-   }
      // ajax call to the darksky api
        $.ajax({
         url: url,
