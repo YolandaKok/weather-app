@@ -22,15 +22,15 @@ $(document).ready(function() {
          // for displaying purpose
          console.log(response);
          // weather summary
-         var summar = response.currently.summary;
-         $(".summary1").html("<h3>" + summar + "</h3>");
+         var summary1 = response.currently.summary;
+         $(".summary1").html("<h3>" + summary1 + "</h3>");
          var temperature1 = response.currently.temperature;
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
-         chooseIcon(icon1, 5);
+         chooseIcon(summary1, icon1, 5);
          // second day
          for (var i = 0; i < 3; i++) {
            // summary
