@@ -7,6 +7,11 @@ $(document).ready(function() {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     var url = "https://api.darksky.net/forecast/2c98dedc19039f6cf6aeb64c502bd651/" + lat + "," + lon;
+    // call to the google api to find the exact city
+    var url_city = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&key=AIzaSyCs290tz0-h_Q36IDAH2kuWfKeQnQIKH6c";
+    $.getJSON(city_url, function(response) {
+        console.log(response);
+    });
     // ajax call to the darksky api
       $.ajax({
        url: url,
