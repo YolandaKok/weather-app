@@ -25,13 +25,18 @@ $(document).ready(function() {
          var summary1 = response.currently.summary;
          $(".summary1").html("<h3>" + summary1 + "</h3>");
          var temperature1 = response.currently.temperature;
+         // var humidity
+         var humidity1 = response.currently.humidity * 100;
+         $(".humidity1").html("<p>" + humidity1 + "</p>");
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
          chooseIcon(icon1, temperature1, 5);
-         // second day
+         // array to save the days
+         var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+         var day = new Date();
          for (var i = 0; i < 3; i++) {
            // summary
            // weather icon
