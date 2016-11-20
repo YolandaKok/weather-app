@@ -30,18 +30,17 @@ $(document).ready(function() {
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
-         chooseIcon(summary1, icon1, temperature1, 5);
+         chooseIcon(icon1, temperature1, 5);
          // second day
          for (var i = 0; i < 3; i++) {
            // summary
-           var summary = response.daily.data[i].summary;
            // weather icon
            var icon = response.daily.data[i].icon;
            // temperature
            var temperature = response.daily.data[i].temperatureMax;
            temperature = Math.round((temperature - 32) * (5/9));
            // date
-           chooseIcon(summary, icon, temperature, i);
+           chooseIcon(icon, temperature, i);
          }
 
        }
@@ -50,20 +49,20 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(summary, icon,temperature, num) {
+  function chooseIcon(icon,temperature, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
-        $(".summary2").html("<h3>" + summary + "</h3>");
+        var selector1 = ".summary2";
         $(".temperature2").html(temperature + "&deg");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
-        $(".summary3").html("<h3>" + summary + "</h3>");
+        var selector1 = ".summary3";
         $(".temperature3").html(temperature + "&deg");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
-        $(".summary4").html("<h3>" + summary + "</h3>");
+        var selector1 = ".summary4";
         $(".temperature4").html(temperature + "&deg");
       }
       else {
@@ -73,33 +72,43 @@ $(document).ready(function() {
       switch (icon) {
         case "clear-day":
           $(selector).html("<i class='wi wi-day-sunny'></i>");
+          $(selector1).html("<h3>Sunny</h3>");
           break;
         case "clear-night":
           $(selector).html("<i class='wi wi-night-clear'></i>");
+          $(selector1).html("<h3>Clear</h3>");
           break;
         case "rain":
           $(selector).html("<i class='wi wi-day-rain'></i>");
+          $(selector1).html("<h3>Rainy</h3>");
           break;
         case "snow":
           $(selector).html("<i class='wi wi-day-snow'></i>");
+          $(selector1).html("<h3>Snowy</h3>");
           break;
         case "sleet":
           $(selector).html("<i class='wi wi-day-sleet-storm'></i>");
+          $(selector1).html("<h3>Sleet</h3>");
           break;
         case "wind":
           $(selector).html("<i class='wi wi-day-windy'></i>");
+          $(selector1).html("<h3>Windy</h3>");
           break;
         case "fog":
           $(selector).html("<i class='wi wi-day-fog'></i>");
+          $(selector1).html("<h3>Fog</h3>");
           break;
         case "cloudy":
           $(selector).html("<i class='wi wi-day-cloudy'></i>");
+          $(selector1).html("<h3>Cloudy</h3>");
           break;
         case "partly-cloudy-day":
           $(selector).html("<i class='wi wi-day-cloudy'></i>");
+          $(selector1).html("<h3>Partly Cloudy</h3>");
           break;
         case "partly-cloudy-night":
           $(selector).html("<i class='wi wi-night-cloudy'></i>");
+          $(selector1).html("<h3>Partly Cloudy</h3>");
           break;
       }
   }
