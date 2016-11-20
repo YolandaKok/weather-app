@@ -27,7 +27,7 @@ $(document).ready(function() {
          var temperature1 = response.currently.temperature;
          // var humidity
          var humidity1 = response.currently.humidity * 100;
-         $(".humidity1").html("<i class='wi wi-humidity'></i>" + humidity1);
+         $(".humidity1").html(humidity1 + " " + "<i class='wi wi-humidity'></i>");
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
          $(".temperature1").html(temperature1 + "&deg");
