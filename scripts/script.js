@@ -69,19 +69,19 @@ $(document).ready(function() {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
         $(".temperature2").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
-        $(".day").html("<h5>" + date + "</h5>");
+        $(".day1").html("<h5>" + date + "</h5>");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
         $(".temperature3").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
-        $(".day").html("<h5>" + date + "</h5>");
+        $(".day2").html("<h5>" + date + "</h5>");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
         $(".temperature4").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
-        $(".day").html("<h5>" + date + "</h5>");
+        $(".day3").html("<h5>" + date + "</h5>");
       }
       else {
         var selector = ".weather-icon1";
