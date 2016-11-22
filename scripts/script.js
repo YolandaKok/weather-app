@@ -37,14 +37,16 @@ $(document).ready(function() {
          // array to save the days
          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
          var day = new Date();
+         var d = day.getDay()
          for (var i = 0; i < 3; i++) {
            // day
-           day += 1;
-           console.log(day);
-           if (day > 6) {
-               day = day - 7;
+           d += 1;
+           console.log(d);
+           if (d > 6) {
+               d = d - 7;
            }
-           var date = week[day];
+           var date = week[d];
+           console.log(date);
            // summary
            // weather icon
            var icon = response.daily.data[i].icon;
