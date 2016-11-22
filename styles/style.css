@@ -16,7 +16,7 @@ div h5 {
   font-size: 18px;
   font-weight: bold;
   margin-left: 30px;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .flex {
@@ -37,6 +37,7 @@ div h5 {
 
 .humidity {
     margin-left: 30px;
+    padding-top: 5px;
 }
 
 .icon {
