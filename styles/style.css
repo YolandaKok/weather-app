@@ -3,10 +3,6 @@ body {
   padding: 50px;
 }
 
-.city {
-    padding-top: 10px;
-}
-
 div h3 {
   color: #838383;
   font-size: 18px;
@@ -20,7 +16,7 @@ div h5 {
   font-size: 18px;
   font-weight: bold;
   margin-left: 30px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .flex {
