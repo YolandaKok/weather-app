@@ -43,6 +43,10 @@ div h5 {
   text-align: center;
 }
 
+.min {
+    font-size: 18px;
+}
+
 .weather1 {
   flex: 1;
 }
