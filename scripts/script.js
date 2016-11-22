@@ -49,7 +49,7 @@ $(document).ready(function() {
            // summary
            // weather icon
            // humidity
-           var humidity = response.currently.data[i].humidity * 100;
+           var humidity = response.daily.data[i].humidity * 100;
            var icon = response.daily.data[i].icon;
            // temperature
            var temperatureMax = response.daily.data[i].temperatureMax;
