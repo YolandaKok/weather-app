@@ -3,6 +3,10 @@ body {
   padding: 50px;
 }
 
+.city {
+    padding-top: 10px;
+}
+
 div h3 {
   color: #838383;
   font-size: 18px;
