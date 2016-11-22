@@ -37,6 +37,7 @@ $(document).ready(function() {
          // array to save the days
          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
          var day = new Date();
+         var date = 0;
          for (var i = 0; i < 3; i++) {
            // day
            day += 1;
