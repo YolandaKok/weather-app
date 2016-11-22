@@ -56,7 +56,7 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(icon,temperatureMax, temperatureMax, num) {
+  function chooseIcon(icon,temperatureMax, temperatureMin, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
