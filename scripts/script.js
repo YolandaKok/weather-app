@@ -40,11 +40,11 @@ $(document).ready(function() {
          for (var i = 0; i < 3; i++) {
            // day
            day += 1;
+           console.log(day);
            if (day > 6) {
                day = day - 7;
            }
            var date = week[day];
-           console.log(date);
            // summary
            // weather icon
            var icon = response.daily.data[i].icon;
