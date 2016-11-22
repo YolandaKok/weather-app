@@ -45,6 +45,7 @@ $(document).ready(function() {
                d = d - 7;
            }
            var date = week[d];
+           console.log(date);
            // summary
            // weather icon
            var icon = response.daily.data[i].icon;
