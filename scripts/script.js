@@ -33,7 +33,7 @@ $(document).ready(function() {
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
-         chooseIcon(icon1, temperature1, 8, 5, 5);
+         chooseIcon(icon1, temperature1, 8, 5, 3, 5);
          // array to save the days
          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
          var day = new Date();
@@ -48,6 +48,8 @@ $(document).ready(function() {
            console.log(date);
            // summary
            // weather icon
+           // humidity
+           var humidity = response.currently.data[i].humidity * 100;
            var icon = response.daily.data[i].icon;
            // temperature
            var temperatureMax = response.daily.data[i].temperatureMax;
@@ -55,7 +57,7 @@ $(document).ready(function() {
            temperatureMax = Math.round((temperatureMax - 32) * (5/9));
            temperatureMin = Math.round((temperatureMin - 32) * (5/9));
            // date
-           chooseIcon(icon, temperatureMax, temperatureMin, date, i);
+           chooseIcon(icon, temperatureMax, temperatureMin, humidity, date, i);
          }
 
        }
@@ -64,23 +66,26 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(icon,temperatureMax, temperatureMin, date, num) {
+  function chooseIcon(icon,temperatureMax, temperatureMin, humidity, date, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
         $(".temperature2").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".humidity2").html(humidity + " " + "<i class='wi wi-humidity'></i>");
         $(".day1").html("<h5>" + date + "</h5>");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
         $(".temperature3").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".humidity3").html(humidity3 + " " + "<i class='wi wi-humidity'></i>");
         $(".day2").html("<h5>" + date + "</h5>");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
         $(".temperature4").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".humidity4").html(humidity4 + " " + "<i class='wi wi-humidity'></i>");
         $(".day3").html("<h5>" + date + "</h5>");
       }
       else {
