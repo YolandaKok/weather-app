@@ -78,14 +78,14 @@ $(document).ready(function() {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
         $(".temperature3").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
-        $(".humidity3").html(humidity3 + " " + "<i class='wi wi-humidity'></i>");
+        $(".humidity3").html(humidity + " " + "<i class='wi wi-humidity'></i>");
         $(".day2").html("<h5>" + date + "</h5>");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
         $(".temperature4").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
-        $(".humidity4").html(humidity4 + " " + "<i class='wi wi-humidity'></i>");
+        $(".humidity4").html(humidity + " " + "<i class='wi wi-humidity'></i>");
         $(".day3").html("<h5>" + date + "</h5>");
       }
       else {
