@@ -33,7 +33,7 @@ $(document).ready(function() {
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
-         chooseIcon(icon1, temperature1, 8, 5);
+         chooseIcon(icon1, temperature1, 8, 5, 5);
          // array to save the days
          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
          var day = new Date();
@@ -41,12 +41,10 @@ $(document).ready(function() {
          for (var i = 0; i < 3; i++) {
            // day
            d += 1;
-           console.log(d);
            if (d > 6) {
                d = d - 7;
            }
            var date = week[d];
-           console.log(date);
            // summary
            // weather icon
            var icon = response.daily.data[i].icon;
@@ -56,7 +54,7 @@ $(document).ready(function() {
            temperatureMax = Math.round((temperatureMax - 32) * (5/9));
            temperatureMin = Math.round((temperatureMin - 32) * (5/9));
            // date
-           chooseIcon(icon, temperatureMax, temperatureMin, i);
+           chooseIcon(icon, temperatureMax, temperatureMin, date, i);
          }
 
        }
@@ -65,21 +63,24 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(icon,temperatureMax, temperatureMin, num) {
+  function chooseIcon(icon,temperatureMax, temperatureMin, date, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
         $(".temperature2").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".day").html("<h5>" + date + "</h5>");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
         $(".temperature3").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".day").html("<h5>" + date + "</h5>");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
         $(".temperature4").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + temperatureMin + "</span>" + "&deg");
+        $(".day").html("<h5>" + date + "</h5>");
       }
       else {
         var selector = ".weather-icon1";
