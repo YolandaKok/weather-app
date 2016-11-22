@@ -33,7 +33,7 @@ $(document).ready(function() {
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
-         chooseIcon(icon1, temperature1, 5);
+         chooseIcon(icon1, temperature1, 8, 5);
          // array to save the days
          var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
          var day = new Date();
@@ -42,10 +42,12 @@ $(document).ready(function() {
            // weather icon
            var icon = response.daily.data[i].icon;
            // temperature
-           var temperature = response.daily.data[i].temperatureMax;
-           temperature = Math.round((temperature - 32) * (5/9));
+           var temperatureMax = response.daily.data[i].temperatureMax;
+           var temperatureMin = response.daily.data[i].temperatureMin;
+           temperatureMax = Math.round((temperatureMax - 32) * (5/9));
+           temperatureMin = Math.round((temperatureMin - 32) * (5/9));
            // date
-           chooseIcon(icon, temperature, i);
+           chooseIcon(icon, temperatureMax, temperatureMin, i);
          }
 
        }
@@ -54,21 +56,21 @@ $(document).ready(function() {
 
 }
   // choose icon function according the weather
-  function chooseIcon(icon,temperature, num) {
+  function chooseIcon(icon,temperatureMax, temperatureMax, num) {
       if(num == 0) {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
-        $(".temperature2").html(temperature + "&deg");
+        $(".temperature2").html(temperatureMax + "&deg" + temperatureMin + "&deg");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
-        $(".temperature3").html(temperature + "&deg");
+        $(".temperature3").html(temperatureMax + "&deg" + temperatureMin + "&deg");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
-        $(".temperature4").html(temperature + "&deg");
+        $(".temperature4").html(temperatureMax + "&deg" + temperatureMin + "&deg");
       }
       else {
         var selector = ".weather-icon1";
