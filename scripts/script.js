@@ -60,17 +60,17 @@ $(document).ready(function() {
       if(num == 0) {
         var selector = ".weather-icon2";
         var selector1 = ".summary2";
-        $(".temperature2").html(temperatureMax + "&deg" + temperatureMin + "&deg");
+        $(".temperature2").html(temperatureMax + "&deg" + "-" + temperatureMin + "&deg");
       }
       else if(num == 1) {
         var selector = ".weather-icon3";
         var selector1 = ".summary3";
-        $(".temperature3").html(temperatureMax + "&deg" + temperatureMin + "&deg");
+        $(".temperature3").html(temperatureMax + "&deg" + "-" + temperatureMin + "&deg");
       }
       else if(num == 2){
         var selector = ".weather-icon4";
         var selector1 = ".summary4";
-        $(".temperature4").html(temperatureMax + "&deg" + temperatureMin + "&deg");
+        $(".temperature4").html(temperatureMax + "&deg" + "-" + temperatureMin + "&deg");
       }
       else {
         var selector = ".weather-icon1";
