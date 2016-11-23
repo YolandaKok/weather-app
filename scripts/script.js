@@ -51,7 +51,7 @@ $(document).ready(function() {
            // weather icon
            // humidity
            var humidity = response.daily.data[i].humidity * 100;
-           humidity = Math.round(humidity1);
+           humidity = Math.round(humidity);
            var icon = response.daily.data[i].icon;
            // temperature
            var temperatureMax = response.daily.data[i].temperatureMax;
