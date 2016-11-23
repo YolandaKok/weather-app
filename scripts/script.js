@@ -27,6 +27,7 @@ $(document).ready(function() {
          var temperature1 = response.currently.temperature;
          // var humidity
          var humidity1 = response.currently.humidity * 100;
+         humidity1 = Math.round(humidity1);
          $(".humidity1").html(humidity1 + " " + "<i class='wi wi-humidity'></i>");
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
@@ -50,6 +51,7 @@ $(document).ready(function() {
            // weather icon
            // humidity
            var humidity = response.daily.data[i].humidity * 100;
+           humidity = Math.round(humidity1);
            var icon = response.daily.data[i].icon;
            // temperature
            var temperatureMax = response.daily.data[i].temperatureMax;
