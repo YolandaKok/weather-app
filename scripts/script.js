@@ -141,12 +141,11 @@ $(document).ready(function() {
 
   // on click change from C to F
   $("#degree").click(function() {
-    if($(this).text() == "F") {
-      $(this).text('C');
-      $(".temperature2").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + 33 + "</span>" + "&deg");
+    if($(this).text() == "&deg;C") {
+      $(this).text('&deg;F');
     }
     else {
-      $(this).text('F');
+      $(this).text('&deg;C');
     }
   });
 });
