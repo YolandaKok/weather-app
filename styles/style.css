@@ -5,12 +5,14 @@ body {
 
 .btn {
   background-color: #d7a718;
+  border: 1px solid black;
   border-radius: 100%;
   color: #000;
   float: right;
   padding-left: 5px;
   padding-top: 5px;
   margin-left: 10px;
+  margin-right: 10px;
   margin-top: 10px;
 }
 
