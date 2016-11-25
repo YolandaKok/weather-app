@@ -142,10 +142,10 @@ $(document).ready(function() {
   // on click change from C to F
   $("#form").click(function() {
     if($(this).text() == "&#8457;") {
-      $(this).text("&#8451;");
+      $(this).html("&#8451;");
     }
     else {
-      $(this).text("&#8457;");
+      $(this).html("&#8457;");
     }
   });
 });
