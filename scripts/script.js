@@ -138,4 +138,9 @@ $(document).ready(function() {
       }
   }
   // end of chooseIcon function
+
+  // on click change from C to F
+  $("#form").click(function() {
+    $(this).html('&#8451;');
+  });
 });
