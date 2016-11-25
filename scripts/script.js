@@ -143,6 +143,7 @@ $(document).ready(function() {
   $("#degree").click(function() {
     if($(this).text() == "F") {
       $(this).text('C');
+      $(".temperature2").html(temperatureMax + "&deg" + "- " + "<span class='min'>" + 33 + "</span>" + "&deg");
     }
     else {
       $(this).text('F');
