@@ -140,7 +140,7 @@ $(document).ready(function() {
   // end of chooseIcon function
 
   // on click change from C to F
-  $("#degree").click(function() {
+  $("#form").click(function() {
     if($(this).text() == "&deg;C") {
       $(this).text('&deg;F');
     }
