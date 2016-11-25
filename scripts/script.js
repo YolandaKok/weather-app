@@ -141,11 +141,11 @@ $(document).ready(function() {
 
   // on click change from C to F
   $("#form").click(function() {
-    if($(this).text() == "&#8457;") {
-      $(this).text('&#8451;');
+    if($(this).text() == "C") {
+      $(this).text('F');
     }
     else {
-      $(this).text('&#8457;');
+      $(this).text('C');
     }
   });
 });
