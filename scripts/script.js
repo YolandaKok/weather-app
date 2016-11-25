@@ -140,12 +140,12 @@ $(document).ready(function() {
   // end of chooseIcon function
 
   // on click change from C to F
-  $("#form").click(function() {
-    if($(this).text() == "C") {
-      $(this).text('F');
+  $("#degree").click(function() {
+    if($(this).text() == "F") {
+      $(this).text('C');
     }
     else {
-      $(this).text('C');
+      $(this).text('F');
     }
   });
 });
