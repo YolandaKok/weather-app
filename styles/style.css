@@ -10,8 +10,8 @@ body {
   color: #000;
   float: right;
   font-family: "Times New Roman", Times, serif;
-  padding-left: 7px;
-  padding-top: 7px;
+  font-weight: bold;
+  padding: 7px;
   margin-left: 15px;
   margin-right: 15px;
   margin-top: 15px;
