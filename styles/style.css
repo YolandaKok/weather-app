@@ -3,6 +3,12 @@ body {
   padding: 50px;
 }
 
+.btn {
+  background-color: #d7a718;
+  border-radius: 100%;
+  color: #000;
+}
+
 div h3 {
   color: #838383;
   font-size: 18px;
