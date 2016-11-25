@@ -142,10 +142,10 @@ $(document).ready(function() {
   // on click change from C to F
   $("#form").click(function() {
     if($(this).text() == "&deg;C") {
-      $(this).text('&deg;F');
+      $(this).html('&deg;F');
     }
     else {
-      $(this).text('&deg;C');
+      $(this).html('&deg;C');
     }
   });
 });
