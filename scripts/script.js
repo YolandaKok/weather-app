@@ -141,11 +141,11 @@ $(document).ready(function() {
 
   // on click change from C to F
   $("#form").click(function() {
-    if($(this).text() == "&deg;C") {
-      $(this).html('&deg;F');
+    if($(this).text() == "°C") {
+      $(this).html('°F');
     }
     else {
-      $(this).html('&deg;C');
+      $(this).html('°C');
     }
   });
 });
