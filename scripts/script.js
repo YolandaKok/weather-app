@@ -153,6 +153,19 @@ $(document).ready(function() {
       // make the temperature appear in fahrenheit
       var temperature1 = (temp[0] * 1.8) + 32;
       $(".temperature1").html(temperature1 + "&deg");
+      var selector;
+      var k = 1;
+      var j = 2;
+      var tempMax;
+      var tempMin;
+      for(var i = 2; i <= 4; i++) {
+          selector = ".temperature" + i;
+          tempMax = (temp[k] * 1.8) + 32;
+          tempMin = (temp[j] * 1.8) + 32;
+          $(selector).html(tempMax + "&deg" + "- " + "<span class='min'>" + tempMin + "</span>" + "&deg");
+          k++;
+          j++;
+      }
     }
     else {
       $(this).html('°C');
