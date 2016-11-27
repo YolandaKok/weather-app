@@ -144,7 +144,7 @@ $(document).ready(function() {
     if($(this).text() == "°C") {
       $(this).html('°F');
       // make the temperature appear in fahrenheit
-      temp1 = $(".temperature1").text()
+      temp1 = $(".temperature1").html()
       console.log(temp1)
     }
     else {
