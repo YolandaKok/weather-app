@@ -143,9 +143,15 @@ $(document).ready(function() {
   $("#form").click(function() {
     if($(this).text() == "°C") {
       $(this).html('°F');
+      // make the temperature appear in fahrenheit
+      temp1 = $(".temperature1").text()
+      console.log(temp1)
     }
     else {
       $(this).html('°C');
     }
   });
+
+  // toggle between fahrenheit and celcius
+
 });
