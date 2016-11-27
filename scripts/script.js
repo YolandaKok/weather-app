@@ -151,8 +151,8 @@ $(document).ready(function() {
     if($(this).text() == "°C") {
       $(this).html('°F');
       // make the temperature appear in fahrenheit
-      console.log(temp[1])
-
+      var temperature1 = (temp[0] * 1.8) + 32;
+      $(".temperature1").html(temperature1 + "&deg");
     }
     else {
       $(this).html('°C');
