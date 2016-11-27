@@ -156,6 +156,7 @@ $(document).ready(function() {
     }
     else {
       $(this).html('°C');
+      $(".temperature1").html(temp[0] + "&deg");
     }
   });
 
