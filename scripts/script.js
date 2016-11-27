@@ -151,7 +151,7 @@ $(document).ready(function() {
     if($(this).text() == "°C") {
       $(this).html('°F');
       // make the temperature appear in fahrenheit
-      var temperature1 = (temp[0] * 1.8) + 32;
+      var temperature1 = Math.round((temp[0] * 1.8) + 32);
       $(".temperature1").html(temperature1 + "&deg");
       var selector;
       var k = 1;
@@ -160,16 +160,29 @@ $(document).ready(function() {
       var tempMin;
       for(var i = 2; i <= 4; i++) {
           selector = ".temperature" + i;
-          tempMax = (temp[k] * 1.8) + 32;
-          tempMin = (temp[j] * 1.8) + 32;
+          tempMax = Math.round((temp[k] * 1.8) + 32);
+          tempMin = Math.round((temp[j] * 1.8) + 32);
           $(selector).html(tempMax + "&deg" + "- " + "<span class='min'>" + tempMin + "</span>" + "&deg");
-          k++;
-          j++;
+          k+=2;
+          j+=2;
       }
     }
     else {
       $(this).html('°C');
       $(".temperature1").html(temp[0] + "&deg");
+      var selector;
+      var k = 1;
+      var j = 2;
+      var tempMax;
+      var tempMin;
+      for(var i = 2; i <= 4; i++) {
+          selector = ".temperature" + i;
+          tempMax = temp[k];
+          tempMin = temp[j];
+          $(selector).html(tempMax + "&deg" + "- " + "<span class='min'>" + tempMin + "</span>" + "&deg");
+          k+=2;
+          j+=2;
+      }
     }
   });
 
