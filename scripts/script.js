@@ -1,3 +1,6 @@
+// global array temperature
+var temp = []
+
 $(document).ready(function() {
   $.ajaxSetup({ cache: false });
   // get exact coords using javascript navigator
@@ -31,6 +34,7 @@ $(document).ready(function() {
          $(".humidity1").html(humidity1 + " " + "<i class='wi wi-humidity'></i>");
          // make them celcius
          temperature1 = Math.round((temperature1 - 32) * (5/9));
+         temp.push(temperature1);
          $(".temperature1").html(temperature1 + "&deg");
          // icon
          var icon1 = response.currently.icon;
@@ -56,8 +60,11 @@ $(document).ready(function() {
            // temperature
            var temperatureMax = response.daily.data[i].temperatureMax;
            var temperatureMin = response.daily.data[i].temperatureMin;
+
            temperatureMax = Math.round((temperatureMax - 32) * (5/9));
+           temp.push(temperatureMax);
            temperatureMin = Math.round((temperatureMin - 32) * (5/9));
+           temp.push(temperatureMin);
            // date
            chooseIcon(icon, temperatureMax, temperatureMin, humidity, date, i);
          }
@@ -144,8 +151,8 @@ $(document).ready(function() {
     if($(this).text() == "°C") {
       $(this).html('°F');
       // make the temperature appear in fahrenheit
-      temp1 = $(".temperature1").text()
-      console.log(temp1)
+      console.log(temp[1])
+
     }
     else {
       $(this).html('°C');
